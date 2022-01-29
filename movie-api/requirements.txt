@@ -1,0 +1,7 @@
+Django==4.0.1
+psycopg2==2.9.3
+djangorestframework==3.13.1
+django-rest-swagger==2.2.0
+drf-yasg==1.20.0
+django-filter==21.1
+djangorestframework-simplejwt==5.0.0
