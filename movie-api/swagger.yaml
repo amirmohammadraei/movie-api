@@ -1,0 +1,36 @@
+
+  /comments:
+    get:
+      tags:
+      - "public"
+      summary: "get movie comments"
+      description: ""
+      operationId: "getComments"
+      parameters:
+        - in: query
+          name: movie
+          schema:
+            type: string
+          required: true
+          description: movie ID to get comments for.
+      responses:
+        400:
+          description:
+            Bad request. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommentList'
+        500:
+          description: There is an internal issue.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  
